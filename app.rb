@@ -1,9 +1,9 @@
 require 'sinatra'
 #require 'sinatra/reloader'
 require './caesar_cipher'
-require './hangman/lib/tools'
-require './hangman/lib/player_data'
-require './hangman/lib/hangman'
+require './hangman/lib/tools.rb'
+require './hangman/lib/player_data.rb'
+require './hangman/lib/hangman.rb'
 
 $img_num = 0
 turns = 0
