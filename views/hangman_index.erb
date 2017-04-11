@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet"> 
+   
+	<title>Hangman</title>
+	<style>
+	    html{
+	    	height: 100%;
+	    	background-color: black;
+	    }
+         body{
+         	
+         	min-height: 100%;
+         	background: url(<%= img %>) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: 'Cinzel', cursive;
+         }
+        
+
+	      .item {
+	      	width: 100%;
+	        
+	      }
+	     
+	      h3{
+	      	font-size: 2vw;
+	      }
+	      #turns{
+			margin-top: 1em;
+			margin-left: 1em;
+	      }
+	      #correct{
+	      	text-align: right;
+	      	padding-right: 2em;
+	      }
+	      #incorrect{
+	      	margin-top: 0px;
+	      	margin-left: 1em;
+	      }
+	      table{
+	      	width:100%;
+	      	text-shadow: 10px 10px 10px white;
+	      	
+	      }
+	      .form{
+	      	margin-top: 0px;
+	      	margin-left: 1em;
+	      }
+
+		  input{
+		  	font-family: 'MedievalSharp', cursive;
+		  }
+		  #back input{
+		  	background-color: #f44336;
+		  	color: white;
+		  	border: none;
+		  	position: absolute;
+		  	right:1;
+		  	bottom: 0;
+		  	width:10vw;
+		  	height: 5vw;
+			font-size: 1vw;
+		  }
+
+	</style>
+</head>
+	<body>
+	 
+        <div class = "item">
+			<table>
+				<tr>
+					<td><h3 id="turns">Turns left: <%= turns %></h3></td>
+					<td><h3 id="correct">Correct Guesses: <%= correct_guesses %></h3></td>
+				</tr>
+			</table>
+			<h3 id="incorrect">Incorrect Guesses: <%= incorrect_guesses %></h3>
+        
+	        <div class="form">
+				<form method="post" action="/checkGuess">
+					<input type="text" maxlength="1" name = "guess" style=" font-size: 2vw; width:4em;"  />
+					<input type="submit" value="enter" style="font-size: 2vw;"/>
+				</form>
+
+				<form method = "get" action="/getNewSecret">
+					<input type="submit"  value="New Game" style="margin-right: 2em; font-size: 1.5vw">
+				</form>
+			</div>
+
+		</div>
+		<form id ="back" method ="get" action="/">
+			<input type="submit" value="Back to Menu">
+		</form>
+	</body>
+</html>

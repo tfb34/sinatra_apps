@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Caesar Cipher</title>
+	<style>
+		body {
+			background: <%= color%>;
+		}
+		.content{
+			text-align: center;
+		}
+		.content textarea{
+			border-radius: 10px;
+			
+		}
+        h3, h4{
+        	font-family: 'Caesar Dressing' , cursive;
+        }
+        textarea{
+        	font-size: 14px;
+        }
+        img{
+        	display: block;
+           position: relative;
+           margin: auto;
+           height: 150px;
+           width: 150px;
+           border: 4px solid grey;
+           margin-top: 40px;
+           border-radius: 75px;
+        }
+        #back input{
+		  	background-color: #555555;
+		  	color: white;
+		  	border: none;
+		  	position: absolute;
+		  	left:0;
+		  	bottom: 0;
+		  	width:10vw;
+		  	height: 5vw;
+			font-size: 1vw;
+		  }
+	</style>
+	<link href="https://fonts.googleapis.com/css?family=Caesar+Dressing" rel="stylesheet"> 
+</head>
+	<body>
+	  <a href="http://imgur.com/1QUeeM9"><img src="http://i.imgur.com/1QUeeM9.jpg?1" title="source: imgur.com" /></a>
+	   <div class = "content">
+	    <h3>Enter the message you want to encrypt: </h3>
+
+	    <form method = "post" action = "/runMethod">
+	     <textarea name="message" cols="40" rows="5"></textarea>
+	     <h4>Enter shift factor(e.g. 5):</h4>
+	     <input type="text" style="width:50px; margin-bottom:10px;" value = "0" name="shiftFactor"><br/>
+	     <input type='submit' value = 'submit'>
+	    </form>
+	    
+	    <p>Result: <%= encryptedMessage %></p>
+	    </div>
+	    <form id ="back" method ="get" action="/">
+			<input type="submit" value="Back to Menu">
+		</form>
+	</body>
+</html>

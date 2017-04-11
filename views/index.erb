@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet"> 
+	<title>collection</title>
+	<style>
+		body{
+			font-family: 'Playfair Display', serif;
+			background: #555555;
+		}
+		h1{
+			color: white;
+			font-size:3vw;
+			margin-left: 5%;
+			margin-top: 5%;
+			width:18vw;
+			padding-top: 1vw;
+			padding-bottom: 1vw;
+			border-right: 1px solid grey;
+		}
+		table{
+			margin: auto;
+		}
+		input{
+			width:14vw;
+			height: 14vw;
+			font-size: 2vw;
+            
+		}
+		input:hover{
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<h1>Collection</h1>
+
+	<table cellspacing="50">
+		<tr>
+			<td>
+				<div class="cipher">
+				<form action="/caesarCipher" method="get">
+			    <input type="submit" value="Cipher">
+				</form>
+			    </div>
+			</td>
+			<td>
+				<div class="hangman">
+				<form method="get" action="/hangman">
+				<input type="submit" value="Hangman">
+				</form>
+				</div>
+			</td>
+			
+		</tr>
+	</table>
+</body>
+</html>
