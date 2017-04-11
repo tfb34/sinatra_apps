@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/reloader'
+#require 'sinatra/reloader'
 require './caesar_cipher'
 require './hangman/lib/tools'
 require './hangman/lib/player_data'
